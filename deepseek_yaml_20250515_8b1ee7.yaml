@@ -1,0 +1,10 @@
+pages:
+  stage: deploy
+  script:
+    - mkdir -p public
+    - cp -r * public/  # Копируем все файлы в папку public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main  # Или master, в зависимости от вашей ветки
